@@ -64,27 +64,6 @@
         <button>Submit</button>
       </div>
     </form>
-    <script>
-
-      //UC1- Validating First Name
-      const text = document.querySelector("#text");
-      const textError = document.querySelector(".text-error");
-      text.addEventListener("input", function () {
-        let nameRange = RegExp("^[A-Z]{1}[a-z]{2,}$");
-        if (nameRange.test(text.value)) {
-          textError.textContent = "";
-        } else {
-          textError.textContent = "Name is incorrect";
-        }
-      });
-      
-      
-      const salary = document.querySelector("#salary");
-      const output = document.querySelector(".salary-output");
-      output.textContent = salary.value;
-      salary.addEventListener("input", function () {
-        output.textContent = salary.value;
-      });
-    </script>
+    <script src="../js/simple_form.js"></script>
   </body>
 </html>
