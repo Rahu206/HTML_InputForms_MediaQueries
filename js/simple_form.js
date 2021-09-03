@@ -1,7 +1,7 @@
 /**
- As a User need to enter a valid email 
-    - E.g. abc.xyz@bl.co.in 
-    - Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions
+  * As a User need to follow pre-defined Mobile Format 
+    - E.g. 91 9919819801 
+    - Country code follow by space and 10 digit number
  */
 
 //UC1- Validating First Name
@@ -37,4 +37,16 @@ salary.addEventListener("input", function () {
      if(emailRegex.test(email.value))
          emailError.emailContent = "";
      else emailError.emailContent = "Email is Incorrect";
+ });
+
+ //UC3- Validating the phone number
+ const tel = document.querySelector("#tel");
+ const telError = document.querySelector(".tel-error");
+ tel.addEventListener("input", function(){
+   let telRegex = RegExp("[1-9]{2}\\s{1}[0-9]{10}");
+   if(telRegex.test(tel.value)){
+     telError.textContent = "";
+   }else{
+     telError.textContent = "phone number is incorrect";
+   }
  });
