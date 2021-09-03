@@ -50,3 +50,15 @@ salary.addEventListener("input", function () {
      telError.textContent = "phone number is incorrect";
    }
  });
+
+ //UC4,5- Validating the password
+ const password = document.querySelector("#pwd");
+ const passwordError = document.querySelector(".password-error");
+ password.addEventListener("input", function(){
+   let passwordRegex = RegExp("^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$");
+   if(passwordRegex.test(password.value)){
+     passwordError.textContent = "";
+   }else{
+     passwordError.textContent = "password is incorrect";
+   }
+ });

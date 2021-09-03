@@ -1,34 +1,30 @@
-html,input {
+html,
+input {
   font-family: sans-serif;
 }
-
 body {
   width: 100%;
   max-width: 600px;
   margin: 0px auto;
   padding: 2em;
 }
-
 .headerContainer {
   display: flex;
   flex-flow: column wrap;
   align-content: center;
-  background: rgb(105, 219, 115);
+  background: tomato;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 form {
   margin-top: 50px;
 }
-
 div {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 label,
 input,
 button {
@@ -44,47 +40,12 @@ label {
 input {
   flex: auto;
 }
-
 button {
   width: 70%;
   margin: 0 auto;
 }
-
 error-output{
   font-size: 12px;
   font-style: italic;
   color: red;
-}
-#message {
-    display:none;
-    background: #f1f1f1;
-    color: #000;
-    position: relative;
-    padding: 20px;
-    margin-top: 10px;
-}
-
-#message p {
-    padding: 10px 35px;
-    font-size: 18px;
-}
-
-.valid {
-    color: green;
-}
-
-.valid:before {
-    position: relative;
-    left: -35px;
-    content: "✔";
-}
-
-.invalid {
-    color: red;
-}
-
-.invalid:before {
-    position: relative;
-    left: -35px;
-    content: "✖";
 }
